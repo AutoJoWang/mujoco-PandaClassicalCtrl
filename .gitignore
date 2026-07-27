@@ -1,0 +1,23 @@
+# Python缓存
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.log
+# 虚拟环境
+panda_mujoco/
+venv/
+env/
+# 模型权重、训练数据
+*.pth
+*.ckpt
+saved_model/
+trajectory_data/
+# mujoco可视化、缓存
+*.xml.bak
+# 系统文件
+.DS_Store
+.vscode/
+*.swp
+# 环境变量密钥
+.env
