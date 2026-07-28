@@ -9,6 +9,7 @@ from planner.trajectory_generator import TrajectoryGenerator
 from planner.grasp import GraspPlanner
 from tasks.pick_place import PickPlaceTask
 
+
 XML_PATH = "robot_description/franka_emika_panda/scene.xml"
 
 
@@ -40,19 +41,13 @@ def main():
             control_timer += env.physics_dt
             
             planner_timer += env.physics_dt
-            camera_timer += env.physics_dt
             #--------------仿真---------------
             env.step()
             
-            if camera_timer > 0.05:
-                img = env.render_camera()
-                cv2.imshow("top_camera",img[:,:,::-1])
-                cv2.waitKey(1)
-                camera_timer = 0.0
             #--------------控制---------------
 
             if control_timer > env.control_dt:
-                # task.update()
+                task.update()
 
                 control_timer = 0.0
 

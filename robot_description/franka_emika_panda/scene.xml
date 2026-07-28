@@ -17,8 +17,8 @@
   <worldbody>
     <light pos="0 0 1.5" dir="0 0 -1" directional="true"/>
     <geom name="floor" size="0 0 0.05" type="plane" material="groundplane"/>
-    <site name='target' type='sphere' pos='0.2 0.2 0.7' size='0.02' rgba='1 0 0 1'/> 
-    <body name="cube" pos="0.55 0.10 0.47">
+    <site name='target' type='sphere' pos='0.2 0.2 0.7' size='0.02' rgba='1 0 1 1'/> 
+    <body name="cube" pos="0.4 0.2 0.47">
       <freejoint/>
       <inertial
           mass="0.05"
@@ -46,6 +46,6 @@
           contype="1"
           conaffinity="1"/>
     </body>        
-    <camera name='top_camera' pos='0.5 0 1.5' quat='1 0 0. 0' fovy='60'/> 
+    <camera name='top_camera' pos='0.55 -0.8 1.0' euler='45 0 0' fovy='60'/> 
   </worldbody>
 </mujoco>
